@@ -11,14 +11,14 @@ class CLock {
     const m = now.getMinutes();
     const s = now.getSeconds();
 
-    this.rotateHoursHand(h);
+    this.rotateHoursHand(h, m);
     this.rotateMinutesHand(m);
     this.rotateSecondsHand(s);
   }
 
-  rotateHoursHand(h) {
+  rotateHoursHand(h, m) {
     this.hoursHand.style.transform = `translate(-50%, -100%) rotate(${
-      (h / 12) * 360
+      (h / 12) * 360 + m / 2
     }deg)`;
   }
 

@@ -13,14 +13,14 @@
 /* Clock nums */
 .clock {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 600px;
+  height: 600px;
   color: white;
-  font-size: 1.5rem;
+  font-size: 5rem;
   border-radius: 50%;
   background-color: rgb(0, 0, 0, 0.3);
   border: 15px solid #ddd;
-  padding: 0.3rem;
+  padding: 1rem;
 }
 .clock-nums {
   position: relative;
@@ -37,11 +37,11 @@
 }
 .num:nth-child(1) {
   --rotation: 30deg;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 .num:nth-child(2) {
   --rotation: 60deg;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 /* Num III */
@@ -55,11 +55,11 @@
 
 .num:nth-child(4) {
   --rotation: 120deg;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 .num:nth-child(5) {
   --rotation: 150deg;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 /* Num VI */
@@ -73,11 +73,11 @@
 
 .num:nth-child(7) {
   --rotation: 210deg;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 .num:nth-child(8) {
   --rotation: 240deg;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 /* Num IX */
@@ -91,11 +91,11 @@
 
 .num:nth-child(10) {
   --rotation: 300deg;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 .num:nth-child(11) {
   --rotation: 330deg;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 /* Clock hands */
@@ -112,8 +112,8 @@
   z-index: 1000;
 }
 .dot {
-  width: 25px;
-  height: 25px;
+  width: 80px;
+  height: 80px;
   background-color: crimson;
   border-radius: 50%;
   position: absolute;
@@ -123,8 +123,8 @@
   z-index: 3000;
 }
 .hours-hand {
-  width: 3px;
-  height: 100px;
+  width: 10px;
+  height: 200px;
   background-color: #ddd;
   position: absolute;
   top: 50%;
@@ -135,8 +135,8 @@
   z-index: 2000;
 }
 .minutes-hand {
-  width: 3px;
-  height: 125px;
+  width: 10px;
+  height: 240px;
   background-color: #ddd;
   position: absolute;
   top: 50%;
@@ -147,8 +147,8 @@
   z-index: 2000;
 }
 .seconds-hand {
-  width: 3px;
-  height: 125px;
+  width: 10px;
+  height: 240px;
   background-color: crimson;
   position: absolute;
   top: 50%;
