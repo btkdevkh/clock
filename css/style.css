@@ -16,38 +16,86 @@
   width: 300px;
   height: 300px;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-radius: 50%;
   background-color: rgb(0, 0, 0, 0.3);
   border: 15px solid #ddd;
+  padding: 0.3rem;
 }
-.clock-num-horizontal {
+.clock-nums {
+  position: relative;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  z-index: 1;
 }
-.clock-num-vertical {
-  height: 90%;
+.num {
+  --rotation: 0;
   position: absolute;
-  top: 1rem;
-  left: 50%;
-  translate: -50% 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
   z-index: 1;
 }
-.dot {
-  width: 25px;
-  height: 25px;
-  background-color: crimson;
-  border-radius: 50%;
-  z-index: 2000;
+.num:nth-child(1) {
+  --rotation: 30deg;
+  font-size: 2rem;
+}
+.num:nth-child(2) {
+  --rotation: 60deg;
+  font-size: 2rem;
+}
+
+/* Num III */
+.num:nth-child(3) {
+  --rotation: 90deg;
+}
+.num:nth-child(3) .backward_III {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+.num:nth-child(4) {
+  --rotation: 120deg;
+  font-size: 2rem;
+}
+.num:nth-child(5) {
+  --rotation: 150deg;
+  font-size: 2rem;
+}
+
+/* Num VI */
+.num:nth-child(6) {
+  --rotation: 180deg;
+}
+.num:nth-child(6) .backward_VI {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+.num:nth-child(7) {
+  --rotation: 210deg;
+  font-size: 2rem;
+}
+.num:nth-child(8) {
+  --rotation: 240deg;
+  font-size: 2rem;
+}
+
+/* Num IX */
+.num:nth-child(9) {
+  --rotation: 270deg;
+}
+.num:nth-child(9) .backward_IX {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+.num:nth-child(10) {
+  --rotation: 300deg;
+  font-size: 2rem;
+}
+.num:nth-child(11) {
+  --rotation: 330deg;
+  font-size: 2rem;
 }
 
 /* Clock hands */
@@ -63,9 +111,20 @@
   transform-origin: bottom center;
   z-index: 1000;
 }
+.dot {
+  width: 25px;
+  height: 25px;
+  background-color: crimson;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3000;
+}
 .hours-hand {
   width: 3px;
-  height: 130px;
+  height: 100px;
   background-color: #ddd;
   position: absolute;
   top: 50%;
@@ -77,7 +136,7 @@
 }
 .minutes-hand {
   width: 3px;
-  height: 149px;
+  height: 125px;
   background-color: #ddd;
   position: absolute;
   top: 50%;
@@ -89,12 +148,13 @@
 }
 .seconds-hand {
   width: 3px;
-  height: 149px;
+  height: 125px;
   background-color: crimson;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -100%) rotate(0deg);
   transform-origin: bottom center;
+  transition: all 0.5s ease-in;
   z-index: 2000;
 }

@@ -29,6 +29,14 @@ class CLock {
   }
 
   rotateSecondsHand(s) {
+    if (s === 0) {
+      this.secondsHand.style.transition = "unset";
+    }
+
+    if (s === 1) {
+      this.secondsHand.style.transition = "all 0.5s ease-in";
+    }
+
     this.secondsHand.style.transform = `translate(-50%, -100%) rotate(${
       (s / 60) * 360
     }deg)`;
